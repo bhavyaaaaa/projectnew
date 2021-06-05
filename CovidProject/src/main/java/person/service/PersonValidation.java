@@ -7,6 +7,7 @@ public class PersonValidation extends DatabaseInterface {
         return (person_details.containsKey(aadhar));
     }
     public boolean validateAadhar(Long aadhar) {
-        return (int) (Math.log10(aadhar) + 1) == 12;
+        return (int)(Math.log10(aadhar) + 1) == 12;
     }
+    public boolean validateAge(String age){ return (Integer.parseInt(age)>=18); }
 }

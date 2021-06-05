@@ -1,6 +1,10 @@
 package person.service;
 
 import dao.Person;
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+import userinput.Input;
 import vaccine.service.Balance;
 
 import java.time.LocalDate;
@@ -14,6 +18,7 @@ public class FirstDose implements Person {
 
     PersonValidation isvalid = new PersonValidation();
     String result="First Dose Finished";
+    private static final Logger logger = LogManager.getLogger(Input.class);
     @Override
     public String dose(Long aadhar, String name, String age){
         if (isvalid.containsAadhar(aadhar))
@@ -24,9 +29,10 @@ public class FirstDose implements Person {
         return result;
     }
     public void singlePerson(Long aadhar,String name, String age) {
-
-        person_details.put(aadhar, new ArrayList<>(Arrays.asList(name, age, LocalDate.now().toString(),LocalDate.now().toString())));
-        Balance.total_dose--;
+        BasicConfigurator.configure();
+        if (isvalid.validateAge(age)) {
+            person_details.put(aadhar, new ArrayList<>(Arrays.asList(name, age, LocalDate.now().toString(), LocalDate.now().toString())));
+            Balance.total_dose--;
+        } else logger.info("Not the right age to get Vaccination");
     }
-
 }

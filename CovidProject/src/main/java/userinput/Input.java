@@ -36,13 +36,13 @@ public class Input extends Pojo {
         }
     }
     public void personDose(int choice){
-        logger.info("Enter Aadhar Number:");
+        logger.info("Enter Aadhar Number: 12 digits only");
         aadhar=sc.nextLong();
         setAadhar(aadhar);
-        logger.info("Enter your Name:");
+        logger.info("Enter your Name: ");
         String name=sc.next();
         setName(name);
-        logger.info("Enter your Age:");
+        logger.info("Enter your Age: Above 18 years only");
         String age=sc.next();
         setAge(age);
         PersonInput.singleDose(choice,aadhar,name,age);
