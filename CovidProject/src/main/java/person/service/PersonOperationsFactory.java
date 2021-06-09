@@ -6,7 +6,7 @@ import java.util.Map;
 
 
 public class PersonOperationsFactory {
-    Map<Integer, Person> person_operations = new HashMap<>() {{
+    static final Map<Integer, Person> person_operations = new HashMap<>() {{
         put(1, new FirstDose());
         put(2, new SecondDose());
     }};

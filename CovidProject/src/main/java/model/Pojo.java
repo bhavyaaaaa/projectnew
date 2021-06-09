@@ -5,8 +5,8 @@ import database.DatabaseInterface;
 public class Pojo extends DatabaseInterface {
 
     public Long aadhar;
-    String name, age, word;
-    int choice, stock;
+    String name, age;
+    int stock;
     public static int total_dose;
     public String getName() {
         return name;

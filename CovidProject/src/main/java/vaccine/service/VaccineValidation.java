@@ -5,9 +5,7 @@ import org.apache.log4j.Logger;
 
 import static vaccine.service.Balance.total_dose;
 
-;
-;
-
+@SuppressWarnings("ALL")
 public class VaccineValidation{
 
     private static final Logger logger = LogManager.getLogger(VaccineValidation.class);

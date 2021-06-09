@@ -4,6 +4,7 @@ import model.Pojo;
 import java.time.LocalDate;
 
 public class AddVaccineStock extends Pojo {
+    @SuppressWarnings("SameReturnValue")
     public static String addStock(int stock) {
         total_dose+=stock;
         if(vaccine_history.containsKey(LocalDate.now())){

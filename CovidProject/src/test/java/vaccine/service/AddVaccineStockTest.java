@@ -6,10 +6,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AddVaccineStockTest {
 
+    @SuppressWarnings("unused")
     @Test
     void addStock() {
         AddVaccineStock addVaccineStock=new AddVaccineStock();
-        assertEquals("Stock Added",addVaccineStock.addStock(20));
-        assertEquals("Stock Added",addVaccineStock.addStock(2000000000));
+        assertEquals("Stock Added", AddVaccineStock.addStock(20));
+        assertEquals("Stock Added", AddVaccineStock.addStock(2000000000));
     }
 }

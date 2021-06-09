@@ -16,11 +16,11 @@ import static database.DatabaseInterface.person_details;
 
 public class FirstDose implements Person {
 
-    PersonValidation isvalid = new PersonValidation();
+    final PersonValidation isvalid = new PersonValidation();
     String result="First Dose Finished";
-    private static final Logger logger = LogManager.getLogger(Input.class);
+    private Logger logger = LogManager.getLogger(Input.class);
     @Override
-    public String dose(Long aadhar, String name, String age){
+    public String dose(long aadhar, String name, String age){
         if (isvalid.containsAadhar(aadhar))
             result="Aadhar already Exists: Person Not Added";
         else {

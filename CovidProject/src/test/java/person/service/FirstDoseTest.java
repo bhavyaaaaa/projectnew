@@ -14,7 +14,7 @@ class FirstDoseTest {
 
     @Test
     void dose() {
-        assertEquals("First Dose Finished",firstDose.dose(123456781234L,"bhavya","21"));
+        assertEquals("First Dose Finished",firstDose.dose(123456781334L,"bhavya","21"));
         assertEquals("Aadhar already Exists: Person Not Added",firstDose.dose(123456781234L,"bhavya","21"));
     }
 

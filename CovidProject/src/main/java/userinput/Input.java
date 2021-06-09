@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 public class Input extends Pojo {
 
-    Scanner sc=new Scanner(System.in);
+    final Scanner sc=new Scanner(System.in);
     private static final Logger logger = LogManager.getLogger(Input.class);
     public void enterYourChoice() {
         BasicConfigurator.configure();
@@ -46,5 +46,6 @@ public class Input extends Pojo {
         String age=sc.next();
         setAge(age);
         PersonInput.singleDose(choice,aadhar,name,age);
+
         }
 }
